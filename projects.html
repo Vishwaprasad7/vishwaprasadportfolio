@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vishwa's Portfolio - My Projects</title>
+  <link rel="stylesheet" href="vishwa-style.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="vishwa-header">
+    <h1 class="vishwa-title">🌟 Vishwaprasad's Portfolio</h1>
+    <nav class="vishwa-nav">
+      <ul class="vishwa-menu">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="projects.html" class="vishwa-active">My Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <main>
+    <section id="vishwa-projects" class="vishwa-section">
+      <h2 class="vishwa-section-title">💻 My Projects</h2>
+
+      <div class="vishwa-gallery">
+        <figure class="vishwa-gallery-item">
+          <img src="img/bg01.jpg" alt="Doctor's Appointment App" class="vishwa-project-img">
+          <figcaption class="vishwa-caption">Doctor's Appointment</figcaption>
+        </figure>
+
+        <figure class="vishwa-gallery-item">
+          <img src="img/bg02.jpg" alt="Transport Website" class="vishwa-project-img">
+          <figcaption class="vishwa-caption">Transport Website</figcaption>
+        </figure>
+
+        <figure class="vishwa-gallery-item">
+          <img src="img/bg03.jpg" alt="Portfolio Website" class="vishwa-project-img">
+          <figcaption class="vishwa-caption">Portfolio Website</figcaption>
+        </figure>
+        <figure class="vishwa-gallery-item">
+          <img src="img/bg04.jpg" alt="Meme calculator" class="vishwa-project-img">
+          <figcaption class="vishwa-caption">Meme calculator</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="vishwa-footer">
+    <p>© 2025 Vishwa. All rights reserved.</p>
+  </footer> 
+  <style>
+    /* General */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f3ff;
+  color: #333;
+}
+
+/* Header */
+.vishwa-header {
+  background: linear-gradient(90deg, #6c5dc1, #8e7dff);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.vishwa-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.vishwa-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.vishwa-menu li {
+  margin: 0 15px;
+}
+
+.vishwa-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.vishwa-menu a:hover,
+.vishwa-active {
+  color: #ffcb42;
+}
+
+/* Section Title */
+.vishwa-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.vishwa-section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #6c5dc1;
+}
+
+/* Gallery */
+.vishwa-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.vishwa-gallery-item {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 320px;
+  text-align: center;
+}
+
+.vishwa-gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.vishwa-project-img {
+  width: 100%;
+  height: 300px;
+  object-fit: fill;
+}
+
+.vishwa-caption {
+  padding: 15px;
+  background-color: #f9f9ff;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.vishwa-footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .vishwa-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vishwa-gallery-item {
+    width: 60%;
+  }
+}
+
+  </style>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  line-height: 1.6;
+}
+header, footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: #444;
+  margin: 0; padding: 0;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover, nav ul li a.active {
+  background-color: #555;
+  border-radius: 4px;
+}
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+section {
+  margin-bottom: 3rem;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+figure.gallery-item {
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background: #fafafa;
+}
+figure.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+figcaption {
+  padding: 0.7rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+label {
+  font-weight: bold;
+}
+input, textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+button {
+  width: 150px;
+  padding: 0.7rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+button:hover {
+  background-color: #555;
+}
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  figure.gallery-item {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+}
