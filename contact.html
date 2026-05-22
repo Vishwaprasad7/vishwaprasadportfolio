@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vishwa's Portfolio</title>
+  <link rel="stylesheet" href="vishwa-style.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="vishwa-header">
+    <h1 class="vishwa-title">🌟 Vishwaprasad's Portfolio🌟</h1>
+    <nav class="vishwa-nav">
+      <ul class="vishwa-menu">
+        <li><a href="index.html" class="vishwa-active">About Me</a></li>
+        <li><a href="projects.html">My Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Info Section -->
+  <section class="vishwa-info">
+    <div class="vishwa-card">📞 Mob No:<br> <b>7498023641,8483050430</b></div>
+    <div class="vishwa-card">📧 Email ID:<br> <b>vishwaprasadwadekar@gmail.com</b></div>
+    <div class="vishwa-card">🏫 Address:<br> Ambegaon Budruk, Sinhgad Law College</div>
+    <div class="vishwa-card">🏡 Permanent Address:<br> Vikasnagar, Latur</div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="vishwa-contact">
+    <h2>📩 Contact Me</h2>
+    <form id="vishwaForm" class="vishwa-form">
+      <label for="vishwaName">Name:</label>
+      <input type="text" id="vishwaName" name="vishwaName" required minlength="3" placeholder="Enter your name">
+
+      <label for="vishwaEmail">Email:</label>
+      <input type="email" id="vishwaEmail" name="vishwaEmail" required placeholder="Enter your email">
+
+      <label for="vishwaMessage">Message:</label>
+      <textarea id="vishwaMessage" name="vishwaMessage" rows="3" required minlength="10" placeholder="Enter your message"></textarea>
+
+      <button type="submit" class="vishwa-btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="vishwa-footer">
+    <p>© 2025 Vishwa. Thank you for visiting 💜</p>
+  </footer>
+<style>
+  /* General */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f3ff;
+  color: #333;
+}
+
+/* Header */
+.vishwa-header {
+  background: linear-gradient(90deg, #6c5dc1, #8e7dff);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.vishwa-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.vishwa-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.vishwa-menu li {
+  margin: 0 15px;
+}
+
+.vishwa-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.vishwa-menu a:hover,
+.vishwa-active {
+  color: #ffcb42;
+}
+
+/* Info Section */
+.vishwa-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px auto;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.vishwa-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 500;
+  flex: 1 1 250px;
+}
+
+/* Contact Section */
+#vishwa-contact {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.vishwa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.vishwa-form input,
+.vishwa-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vishwa-btn {
+  background-color: #6c5dc1;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.vishwa-btn:hover {
+  background-color: #5949b5;
+}
+
+/* Footer */
+.vishwa-footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .vishwa-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vishwa-card {
+    width: 90%;
+  }
+}
+
+
+</style>
+</body>
+</html>
+<script>
+document.getElementById("vishwaForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = {
+    vishwaName: document.getElementById("vishwaName").value,
+    vishwaEmail: document.getElementById("vishwaEmail").value,
+    vishwaMessage: document.getElementById("vishwaMessage").value,
+  };
+
+  const response = await fetch("/send-message", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+  alert(result.message);
+  e.target.reset();
+});
+</script>
+<script src="script.js"></script>
+

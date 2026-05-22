@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vishwa's Portfolio - About Me</title>
+  <link rel="stylesheet" href="vishwa-style.css" />
+</head>
+<body>
+
+  <header class="vishwa-header">
+    <h1 class="vishwa-title">🌟Vishwaprasad's Portfolio🌟</h1>
+
+    <nav class="vishwa-nav">
+      <ul>
+        <li><a href="index.html" class="vishwa-active">About Me</a></li>
+        <li><a href="projects.html">My Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="vishwa-main">
+
+    <section>
+      <!-- Profile Image -->
+  <div class="vishwa-points">
+
+  <figure class="vishwa-gallery-item">
+    <img src="img/bg03.jpg" class="vishwa-project-img">
+    <figcaption>Image 1</figcaption>
+  </figure>
+
+  <figure class="vishwa-gallery-item">
+    <img src="img/bg05.png.jpeg" class="vishwa-project-img">
+    <figcaption>Image 2</figcaption>
+  </figure>
+
+</div>
+    </section>
+
+    <!-- NEW ABOUT SECTION -->
+    <section class="about-section">
+
+      <h2 class="about-title">
+        👨‍💻 About Me
+      </h2>
+
+      <div class="about-card">
+
+        <h1 class="name">
+          Vishwaprasad Mahadev Wadekar
+        </h1>
+
+        <hr>
+
+        <!-- Education -->
+        <h2>🎓 Education</h2>
+
+        <p>
+          <strong>Bachelor of Computer Applications</strong> - 8.17 CGPA
+          <br>
+          Swami Ramanand Teerth Marathwada University
+          <br>
+          06/2021 - 06/2024
+        </p>
+
+        <p>
+          Pursuing MCA in Tilak Maharashtra Vidyapeeth, Pune.
+        </p>
+
+        <!-- Languages -->
+        <h2>🌍 Languages</h2>
+
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Marathi (Native)</li>
+        </ul>
+
+        <!-- Skills -->
+        <h2>💻 Technical Skills</h2>
+
+        <div class="skills">
+
+          <span>JavaScript</span>
+          <span>React.js</span>
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>MongoDB</span>
+
+        </div>
+
+        <!-- Passion -->
+        <h2>🔥 Passion</h2>
+
+        <p>
+          My passion is to do my best wherever I work and get recognized by all while continuously improving my skills to the next level.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="vishwa-footer">
+    <p>© 2025 Vishwa. Thank you for visiting!</p>
+  </footer>
+
+<style>
+
+/* General Reset */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f9;
+  color: #333;
+}
+
+/* Header */
+.vishwa-header {
+  background: linear-gradient(135deg, #6c5dc1, #5144a0);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vishwa-title {
+  margin: 0;
+  font-size: 2.2em;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+.vishwa-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 10px 0 0;
+  gap: 20px;
+}
+
+.vishwa-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.vishwa-nav a:hover,
+.vishwa-active {
+  color: #ffb347;
+}
+
+/* Main */
+.vishwa-main {
+  padding: 20px;
+}
+
+/* Contact Cards */
+.vishwa-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.vishwa-point {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vishwa-point:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Gallery */
+.vishwa-gallery-item {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+.vishwa-project-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+  margin-top: 50px;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #5144a0;
+  margin-bottom: 30px;
+}
+
+.about-card {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.name {
+  text-align: center;
+  color: #222;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.about-card h2 {
+  color: #0077ff;
+  margin-top: 30px;
+}
+
+.about-card p,
+.about-card li {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.skills span {
+  background: #0077ff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* Footer */
+.vishwa-footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+  .vishwa-points {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vishwa-point {
+    width: 90%;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+}
+
+</style>
+
+</body>
+</html>
