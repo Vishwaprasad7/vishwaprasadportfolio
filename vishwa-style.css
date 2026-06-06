@@ -1,0 +1,376 @@
+/* Global Styles and Theme Variables */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Dark Theme variables (default) */
+  --bg-primary: #0a0813;
+  --bg-secondary: #120f26;
+  --bg-card: rgba(22, 19, 43, 0.65);
+  --bg-header: rgba(14, 11, 28, 0.75);
+  --text-primary: #f3f1fa;
+  --text-secondary: #9f9abf;
+  --accent-primary: #8257e5;
+  --accent-secondary: #ff007f;
+  --accent-glow: rgba(130, 87, 229, 0.4);
+  --accent-hover: #966eff;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(130, 87, 229, 0.3);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 15px rgba(130, 87, 229, 0.2);
+  --nav-active: #ffb347;
+  --transition-speed: 0.35s;
+}
+
+:root.light-theme {
+  /* Light Theme variables */
+  --bg-primary: #f4f3fb;
+  --bg-secondary: #eaeaef;
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --bg-header: rgba(244, 243, 251, 0.85);
+  --text-primary: #120f26;
+  --text-secondary: #5c577a;
+  --accent-primary: #6c3ce0;
+  --accent-secondary: #d80064;
+  --accent-glow: rgba(108, 60, 224, 0.2);
+  --accent-hover: #5325c2;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(108, 60, 224, 0.25);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(108, 60, 224, 0.08);
+  --shadow-lg: 0 20px 40px rgba(108, 60, 224, 0.12);
+  --shadow-glow: 0 0 15px rgba(108, 60, 224, 0.1);
+  --nav-active: #e65100;
+}
+
+/* Base resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Background Animation Canvas */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Header & Navigation */
+.vishwa-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-header);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vishwa-title {
+  font-size: 1.6em;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a78bfa, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.vishwa-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.vishwa-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+}
+
+.vishwa-nav a {
+  display: block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 18px;
+  border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.vishwa-nav a:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.vishwa-nav a.vishwa-active {
+  color: #fff;
+  background: var(--accent-primary);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.vishwa-nav a.vishwa-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 4px;
+  background: var(--nav-active);
+  border-radius: 2px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.08) rotate(15deg);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.theme-toggle-btn i {
+  font-size: 1.2rem;
+  transition: transform 0.5s ease;
+}
+
+/* Main Container & Page Transitions */
+.vishwa-main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+#content-area {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#content-area.fade-out {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+#content-area.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  transform: translateY(-5px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(130, 87, 229, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Shared Footer styling */
+.vishwa-footer {
+  background: rgba(10, 8, 19, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 25px;
+  margin-top: auto;
+  font-size: 0.9rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.vishwa-footer p {
+  letter-spacing: 0.5px;
+}
+
+.vishwa-footer span {
+  color: var(--accent-secondary);
+  animation: pulse 1.5s infinite;
+  display: inline-block;
+}
+
+/* Global Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Loader Spinner */
+.page-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Toast Notifications */
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(18, 15, 38, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--accent-primary);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+}
+
+.toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  color: var(--accent-secondary);
+  font-size: 1.2rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .vishwa-header {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  
+  .vishwa-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .vishwa-nav ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .vishwa-nav a {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

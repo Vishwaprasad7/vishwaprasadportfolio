@@ -8,292 +8,424 @@
 </head>
 <body>
 
-  <header class="vishwa-header">
-    <h1 class="vishwa-title">🌟Vishwaprasad's Portfolio🌟</h1>
+  <!-- Direct Load Redirect Script -->
+  <script>
+    if (window.self === window.top) {
+      window.location.href = 'base.html#/about';
+    }
+  </script>
 
-    <nav class="vishwa-nav">
-      <ul>
-        <li><a href="index.html" class="vishwa-active">About Me</a></li>
-        <li><a href="projects.html">My Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  <!-- About Me Page Content -->
   <main class="vishwa-main">
+    <div class="about-grid">
+      
+      <!-- Left Column: Profile Image -->
+      <section class="profile-gallery-sec">
+        <div class="about-gallery">
+          <figure class="profile-frame">
+            <div class="image-wrapper">
+              <img src="img/vishwa_protfolio.png" alt="Vishwaprasad Wadekar" class="profile-img">
+            </div>
+            <figcaption><i class="fa-solid fa-user-tie"></i> Vishwaprasad Wadekar</figcaption>
+          </figure>
+        </div>
+      </section>
 
-    <section>
-      <!-- Profile Image -->
-  <div class="vishwa-points">
+      <!-- Right Column: About Details Card -->
+      <section class="about-details-sec">
+        <div class="glass-card about-card-content">
+          
+          <!-- Name Header -->
+          <div class="about-header">
+            <h2 class="developer-name">Vishwaprasad Wadekar</h2>
+            <p class="developer-subtitle"><i class="fa-solid fa-code"></i> Aspiring Full Stack Developer</p>
+            
+            <div class="social-links">
+              <a href="https://github.com/Vishwaprasad7" target="_blank" class="social-btn github-btn">
+                <i class="fa-brands fa-github"></i> GitHub Profile
+              </a>
+            </div>
+          </div>
 
-  <figure class="vishwa-gallery-item">
-    <img src="img/bg03.jpg" class="vishwa-project-img">
-    <figcaption>Image 1</figcaption>
-  </figure>
+          <hr class="separator">
 
-  <figure class="vishwa-gallery-item">
-    <img src="img/bg05.jpeg" class="vishwa-project-img">
-    <figcaption>Image 2</figcaption>
-  </figure>
+          <!-- Education Section -->
+          <div class="about-sub-section">
+            <h3 class="sec-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <div class="education-block">
+              <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-info">
+                  <h4>Tilak Maharashtra Vidyapeeth, Pune</h4>
+                  <p class="edu-degree">Master of Computer Applications (MCA)</p>
+                  <p class="edu-date">07/2024 - Present</p>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-info">
+                  <h4>Swami Ramanand Teerth Marathwada University</h4>
+                  <p class="edu-degree">Bachelor of Computer Applications (BCA)</p>
+                  <p class="edu-date">06/2021 - 06/2024 | Grade: <strong>8.17 CGPA</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-</div>
-    </section>
+          <!-- Technical Skills Section -->
+          <div class="about-sub-section">
+            <h3 class="sec-title"><i class="fa-solid fa-laptop-code"></i> Technical Stack</h3>
+            <div class="skills-grid">
+              <span class="skill-tag html-css"><i class="fa-brands fa-html5"></i> HTML5 & CSS3</span>
+              <span class="skill-tag js-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skill-tag react-tag"><i class="fa-brands fa-react"></i> React.js</span>
+              <span class="skill-tag node-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+              <span class="skill-tag express-tag"><i class="fa-solid fa-server"></i> Express.js</span>
+              <span class="skill-tag mongo-tag"><i class="fa-solid fa-database"></i> MongoDB</span>
+            </div>
+          </div>
 
-    <!-- NEW ABOUT SECTION -->
-    <section class="about-section">
+          <!-- Languages Section -->
+          <div class="about-sub-section">
+            <h3 class="sec-title"><i class="fa-solid fa-earth-americas"></i> Languages</h3>
+            <div class="languages-list">
+              <div class="lang-item">
+                <span class="lang-flag">🇬🇧</span>
+                <span class="lang-name">English</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-flag">🇮🇳</span>
+                <span class="lang-name">Hindi</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-flag">🇮🇳</span>
+                <span class="lang-name">Marathi <span class="native-badge">Native</span></span>
+              </div>
+            </div>
+          </div>
 
-      <h2 class="about-title">
-        👨‍💻 About Me
-      </h2>
-
-      <div class="about-card">
-
-        <h1 class="name">
-          Vishwaprasad Mahadev Wadekar
-        </h1>
-        <li>
-  <a href="https://github.com/Vishwaprasad7" target="_blank">
-    GitHub
-  </a>
-</li>
-
-        <hr>
-
-        <!-- Education -->
-        <h2>🎓 Education</h2>
-
-        <p>
-          <strong>Bachelor of Computer Applications</strong> - 8.17 CGPA
-          <br>
-          Swami Ramanand Teerth Marathwada University
-          <br>
-          06/2021 - 06/2024
-        </p>
-
-        <p>
-          Pursuing MCA in Tilak Maharashtra Vidyapeeth, Pune.
-        </p>
-
-        <!-- Languages -->
-        <h2>🌍 Languages</h2>
-
-        <ul>
-          <li>English</li>
-          <li>Hindi</li>
-          <li>Marathi (Native)</li>
-        </ul>
-
-        <!-- Skills -->
-        <h2>💻 Technical Skills</h2>
-
-        <div class="skills">
-
-          <span>JavaScript</span>
-          <span>React.js</span>
-          <span>Node.js</span>
-          <span>Express.js</span>
-          <span>MongoDB</span>
+          <!-- Passion Section -->
+          <div class="about-sub-section">
+            <h3 class="sec-title"><i class="fa-solid fa-fire-flame-curved"></i> Passion</h3>
+            <p class="passion-text">
+              "My passion is to perform my best wherever I work, continuously pushing the boundaries of my skills to the next level while delivering clean, functional, and highly-scalable solutions."
+            </p>
+          </div>
 
         </div>
+      </section>
 
-        <!-- Passion -->
-        <h2>🔥 Passion</h2>
-
-        <p>
-          My passion is to do my best wherever I work and get recognized by all while continuously improving my skills to the next level.
-        </p>
-
-      </div>
-
-    </section>
-
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="vishwa-footer">
-    <p>© 2025 Vishwa. Thank you for visiting!</p>
-  </footer>
+  <style>
+    /* Page Specific CSS for index.html */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 40px;
+      align-items: start;
+      margin-top: 20px;
+    }
 
-<style>
+    /* Left Column Styling */
+    .about-gallery {
+      display: flex;
+      justify-content: center;
+    }
 
-/* General Reset */
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f3f3f9;
-  color: #333;
-}
+    .profile-frame {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-speed) ease;
+      overflow: hidden;
+      animation: float 6s ease-in-out infinite;
+      width: 100%;
+      max-width: 380px;
+    }
 
-/* Header */
-.vishwa-header {
-  background: linear-gradient(135deg, #6c5dc1, #5144a0);
-  color: white;
-  text-align: center;
-  padding: 25px 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    .profile-frame:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-lg), var(--shadow-glow);
+    }
 
-.vishwa-title {
-  margin: 0;
-  font-size: 2.2em;
-  letter-spacing: 1px;
-}
+    .image-wrapper {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 460px;
+    }
 
-/* Navigation */
-.vishwa-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 10px 0 0;
-  gap: 20px;
-}
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
 
-.vishwa-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
-}
+    .profile-frame:hover .profile-img {
+      transform: scale(1.05);
+    }
 
-.vishwa-nav a:hover,
-.vishwa-active {
-  color: #ffb347;
-}
+    .profile-frame figcaption {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
 
-/* Main */
-.vishwa-main {
-  padding: 20px;
-}
+    /* Right Column Styling */
+    .about-card-content {
+      padding: 40px;
+    }
 
-/* Contact Cards */
-.vishwa-points {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+    .developer-name {
+      font-size: 2.5em;
+      font-weight: 800;
+      margin-bottom: 5px;
+      background: linear-gradient(90deg, var(--text-primary), var(--accent-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-.vishwa-point {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .developer-subtitle {
+      font-size: 1.15em;
+      color: var(--text-secondary);
+      font-weight: 500;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-.vishwa-point:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
 
-/* Gallery */
-.vishwa-gallery-item {
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 320px;
-  text-align: center;
-}
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-.vishwa-project-img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
+    .github-btn {
+      background: #24292e;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
 
-/* About Section */
-.about-section {
-  margin-top: 50px;
-}
+    .github-btn:hover {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
 
-.about-title {
-  text-align: center;
-  font-size: 2.5em;
-  color: #5144a0;
-  margin-bottom: 30px;
-}
+    .separator {
+      border: none;
+      height: 1px;
+      background: var(--border-color);
+      margin: 30px 0;
+    }
 
-.about-card {
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+    .about-sub-section {
+      margin-bottom: 35px;
+    }
 
-.name {
-  text-align: center;
-  color: #222;
-  font-size: 38px;
-  margin-bottom: 10px;
-}
+    .about-sub-section:last-child {
+      margin-bottom: 0;
+    }
 
-.about-card h2 {
-  color: #0077ff;
-  margin-top: 30px;
-}
+    .sec-title {
+      font-size: 1.3em;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
 
-.about-card p,
-.about-card li {
-  font-size: 18px;
-  line-height: 1.8;
-}
+    .sec-title::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background: var(--accent-primary);
+      border-radius: 2px;
+    }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-}
+    /* Education styling */
+    .education-block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-left: 2px solid var(--border-color);
+      padding-left: 20px;
+      margin-left: 5px;
+    }
 
-.skills span {
-  background: #0077ff;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 25px;
-  font-weight: bold;
-}
+    .edu-item {
+      position: relative;
+    }
 
-/* Footer */
-.vishwa-footer {
-  background-color: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
+    .edu-dot {
+      position: absolute;
+      left: -27px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      border: 2px solid var(--bg-primary);
+      box-shadow: 0 0 8px var(--accent-glow);
+    }
 
-/* Responsive */
-@media (max-width: 600px) {
+    .edu-info h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
 
-  .vishwa-points {
-    flex-direction: column;
-    align-items: center;
-  }
+    .edu-degree {
+      font-size: 0.95rem;
+      color: var(--accent-primary);
+      font-weight: 500;
+      margin: 2px 0;
+    }
 
-  .vishwa-point {
-    width: 90%;
-  }
+    .edu-date {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
 
-  .about-card {
-    padding: 20px;
-  }
+    /* Skills styling */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-  .name {
-    font-size: 28px;
-  }
+    .skill-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: all 0.3s ease;
+    }
 
-}
+    .skill-tag:hover {
+      transform: translateY(-3px) scale(1.03);
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      color: #fff;
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
 
-</style>
+    /* Languages styling */
+    .languages-list {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .lang-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-color);
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-weight: 500;
+    }
+
+    .lang-flag {
+      font-size: 1.2rem;
+    }
+
+    .native-badge {
+      font-size: 0.75rem;
+      background: var(--accent-primary);
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 6px;
+      font-weight: 600;
+    }
+
+    /* Passion text */
+    .passion-text {
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      border-left: 3px solid var(--accent-primary);
+      padding-left: 15px;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 850px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .about-gallery {
+        justify-content: center;
+      }
+
+      .profile-frame {
+        max-width: 360px;
+      }
+
+      .image-wrapper {
+        height: 420px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .profile-frame {
+        max-width: 300px;
+      }
+
+      .image-wrapper {
+        height: 350px;
+      }
+
+      .about-card-content {
+        padding: 20px;
+      }
+
+      .developer-name {
+        font-size: 1.8em;
+      }
+    }
+  </style>
 
 </body>
 </html>

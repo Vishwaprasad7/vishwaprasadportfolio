@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vishwaprasad's Portfolio</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="vishwa-style.css" />
+</head>
+<body>
+
+  <!-- Dynamic Particle Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Global Header -->
+  <header class="vishwa-header">
+    <div class="header-brand">
+      <h1 class="vishwa-title">🌟 Vishwaprasad's Portfolio 🌟</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="vishwa-nav">
+      <ul>
+        <li><a href="#/about" class="vishwa-active">About Me</a></li>
+        <li><a href="#/projects">My Projects</a></li>
+        <li><a href="#/contact">Contact</a></li>
+      </ul>
+      
+      <!-- Theme Switch Toggle -->
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
+        <i class="fas fa-sun"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Dynamic Page Content Area -->
+  <main class="vishwa-main">
+    <div id="content-area">
+      <!-- Dynamic pages will be loaded here -->
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="vishwa-footer">
+    <p>© 2025 Vishwaprasad Wadekar. Built with <span>💜</span> and dynamic layouts.</p>
+  </footer>
+
+  <!-- Background Particle Animation Script -->
+  <script>
+    (function() {
+      const canvas = document.getElementById('particles-canvas');
+      if (!canvas) return;
+      
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      // Handle Resize
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * 0.5;
+          this.vy = (Math.random() - 0.5) * 0.5;
+          this.radius = Math.random() * 2 + 1;
+        }
+
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+
+          if (this.x < 0 || this.x > width) this.vx *= -1;
+          if (this.y < 0 || this.y > height) this.vy *= -1;
+        }
+
+        draw() {
+          const isLight = document.documentElement.classList.contains('light-theme');
+          ctx.fillStyle = isLight ? 'rgba(108, 60, 224, 0.15)' : 'rgba(130, 87, 229, 0.22)';
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // Initialize Particles
+      const particleCount = Math.min(80, Math.floor((width * height) / 15000));
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        
+        const isLight = document.documentElement.classList.contains('light-theme');
+        const lineColor = isLight ? 'rgba(108, 60, 224, 0.04)' : 'rgba(130, 87, 229, 0.06)';
+        
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+
+        // Draw connections
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            
+            if (dist < 110) {
+              ctx.strokeStyle = lineColor;
+              ctx.lineWidth = 0.5;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+        
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    })();
+  </script>
+
+  <!-- Router Initialization -->
+  <script src="router.js"></script>
+
+</body>
+</html>

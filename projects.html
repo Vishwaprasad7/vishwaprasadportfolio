@@ -6,173 +6,308 @@
   <title>Vishwa's Portfolio - My Projects</title>
   <link rel="stylesheet" href="vishwa-style.css" />
 </head>
-
 <body>
 
-  <!-- Header -->
-  <header class="vishwa-header">
-    <h1 class="vishwa-title">🌟 Vishwaprasad's Portfolio🌟</h1>
-    <nav class="vishwa-nav">
-      <ul class="vishwa-menu">
-        <li><a href="index.html">About Me</a></li>
-        <li><a href="projects.html" class="vishwa-active">My Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Direct Load Redirect Script -->
+  <script>
+    if (window.self === window.top) {
+      window.location.href = 'base.html#/projects';
+    }
+  </script>
 
-  <!-- Projects Section -->
-  <main>
-    <section id="vishwa-projects" class="vishwa-section">
-      <h2 class="vishwa-section-title">💻 My Projects</h2>
+  <!-- Projects Page Content -->
+  <main class="vishwa-main">
+    <section class="projects-section">
+      <div class="section-header">
+        <h2 class="projects-title"><i class="fa-solid fa-laptop-code"></i> My Projects</h2>
+        <p class="projects-subtitle">A showcase of full stack applications and responsive web experiences I've developed.</p>
+      </div>
 
-      <div class="vishwa-gallery">
-        <figure class="vishwa-gallery-item">
-          <img src="img/bg01.jpg" alt="Doctor's Appointment App" class="vishwa-project-img">
-          <figcaption class="vishwa-caption">Doctor's Appointment</figcaption>
-        </figure>
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: Doctor's Appointment -->
+        <article class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="img/bg01.jpg" alt="Doctor's Appointment App" class="project-img">
+            <div class="project-overlay">
+              <span class="view-details">Full Stack App</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-card-title">Doctor's Appointment</h3>
+            <p class="project-desc">
+              A comprehensive appointment booking application designed to streamline clinics and patient scheduling. Features patient registration, slot booking, and doctor dashboards.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge react"><i class="fa-brands fa-react"></i> React.js</span>
+              <span class="tech-badge node"><i class="fa-brands fa-node-js"></i> Node.js</span>
+              <span class="tech-badge mongo"><i class="fa-solid fa-database"></i> MongoDB</span>
+            </div>
+            <a href="https://github.com/Vishwaprasad7" target="_blank" class="project-link">
+              View Source <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
 
-        <figure class="vishwa-gallery-item">
-          <img src="img/bg02.jpg" alt="Transport Website" class="vishwa-project-img">
-          <figcaption class="vishwa-caption">Transport Website</figcaption>
-        </figure>
+        <!-- Project 2: Transport Website -->
+        <article class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="img/bg02.jpg" alt="Transport Website" class="project-img">
+            <div class="project-overlay">
+              <span class="view-details">Logistics & Shipping</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-card-title">Transport & Logistics</h3>
+            <p class="project-desc">
+              A web-based logistics application featuring shipment tracking, service catalogs, and query forms. Designed with robust responsiveness and high visual speed.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge js"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="tech-badge html"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="tech-badge css"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            </div>
+            <a href="https://github.com/Vishwaprasad7" target="_blank" class="project-link">
+              View Source <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
 
-        <figure class="vishwa-gallery-item">
-          <img src="img/bg03.jpg" alt="Portfolio Website" class="vishwa-project-img">
-          <figcaption class="vishwa-caption">Portfolio Website</figcaption>
-        </figure>
-        <figure class="vishwa-gallery-item">
-          <img src="img/bg04.jpg" alt="Meme calculator" class="vishwa-project-img">
-          <figcaption class="vishwa-caption">Meme calculator</figcaption>
-        </figure>
+        <!-- Project 3: Portfolio Website -->
+        <article class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="img/bg03.jpg" alt="Portfolio Website" class="project-img">
+            <div class="project-overlay">
+              <span class="view-details">Personal Brand</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-card-title">Developer Portfolio</h3>
+            <p class="project-desc">
+              An interactive, modern portfolio site incorporating dynamic client-side layouts, glassmorphism, background particle animation, and theme toggling.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge js"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="tech-badge html"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="tech-badge css"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            </div>
+            <a href="https://github.com/Vishwaprasad7" target="_blank" class="project-link">
+              View Source <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Meme Calculator -->
+        <article class="glass-card project-card">
+          <div class="project-img-wrapper">
+            <img src="img/bg04.jpg" alt="Meme calculator" class="project-img">
+            <div class="project-overlay">
+              <span class="view-details">Interactive & Fun</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-card-title">Meme Calculator</h3>
+            <p class="project-desc">
+              A playful web calculator that displays custom memes and messages depending on operational outputs. Combines functional logic with engaging user interactions.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge js"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="tech-badge html"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="tech-badge css"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            </div>
+            <a href="https://github.com/Vishwaprasad7" target="_blank" class="project-link">
+              View Source <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="vishwa-footer">
-    <p>© 2025 Vishwa. All rights reserved.</p>
-  </footer> 
   <style>
-    /* General */
-body {
-  font-family: "Poppins", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f3ff;
-  color: #333;
-}
+    /* Page Specific CSS for projects.html */
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-/* Header */
-.vishwa-header {
-  background: linear-gradient(90deg, #6c5dc1, #8e7dff);
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+    .projects-title {
+      font-size: 2.5em;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      display: inline-block;
+      position: relative;
+    }
 
-.vishwa-title {
-  margin: 0;
-  font-size: 2rem;
-}
+    .projects-title::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 3px;
+      background: var(--accent-primary);
+      border-radius: 2px;
+    }
 
-.vishwa-menu {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
+    .projects-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 15px auto 0;
+    }
 
-.vishwa-menu li {
-  margin: 0 15px;
-}
+    /* Projects Grid layout */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-.vishwa-menu a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  transition: 0.3s;
-}
+    /* Project card enhancements */
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 100%;
+    }
 
-.vishwa-menu a:hover,
-.vishwa-active {
-  color: #ffcb42;
-}
+    .project-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background: #000;
+    }
 
-/* Section Title */
-.vishwa-section {
-  padding: 40px 20px;
-  text-align: center;
-}
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
 
-.vishwa-section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #6c5dc1;
-}
+    .project-card:hover .project-img {
+      transform: scale(1.08) rotate(1deg);
+      opacity: 0.85;
+    }
 
-/* Gallery */
-.vishwa-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    /* Hover overlay */
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 11, 26, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
 
-.vishwa-gallery-item {
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: 320px;
-  text-align: center;
-}
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
 
-.vishwa-gallery-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-}
+    .view-details {
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1px solid #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
 
-.vishwa-project-img {
-  width: 100%;
-  height: 300px;
-  object-fit: fill;
-}
+    .project-card:hover .view-details {
+      transform: translateY(0);
+      background: #fff;
+      color: var(--bg-primary);
+    }
 
-.vishwa-caption {
-  padding: 15px;
-  background-color: #f9f9ff;
-  font-weight: 600;
-  color: #333;
-  font-size: 1.1rem;
-}
+    /* Content styling */
+    .project-content {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
 
-/* Footer */
-.vishwa-footer {
-  background-color: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-}
+    .project-card-title {
+      font-size: 1.35em;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .vishwa-gallery {
-    flex-direction: column;
-    align-items: center;
-  }
+    .project-desc {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex: 1;
+    }
 
-  .vishwa-gallery-item {
-    width: 60%;
-  }
-}
+    /* Tech badges */
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
 
+    .tech-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+
+    /* Interactive tag states */
+    .project-card:hover .tech-badge {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+    }
+
+    .project-link {
+      align-self: flex-start;
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      margin-top: auto;
+    }
+
+    .project-link:hover {
+      color: var(--accent-hover);
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+      }
+    }
   </style>
 
 </body>
