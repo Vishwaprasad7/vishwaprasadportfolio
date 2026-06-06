@@ -29,7 +29,7 @@
         <!-- Project 1: Doctor's Appointment -->
         <article class="glass-card project-card">
           <div class="project-img-wrapper">
-            <img src="img/bg01.jpg" alt="Doctor's Appointment App" class="project-img">
+            <img src="img/doctor_appointment.jpg" alt="Doctor's Appointment App" class="project-img">
             <div class="project-overlay">
               <span class="view-details">Full Stack App</span>
             </div>
@@ -44,7 +44,7 @@
               <span class="tech-badge node"><i class="fa-brands fa-node-js"></i> Node.js</span>
               <span class="tech-badge mongo"><i class="fa-solid fa-database"></i> MongoDB</span>
             </div>
-            <a href="https://github.com/Vishwaprasad7" target="_blank" class="project-link">
+            <a href="https://github.com/Vishwaprasad7/Doctor-s-Appointment-booking-system" target="_blank" class="project-link">
               View Source <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
@@ -53,7 +53,7 @@
         <!-- Project 2: Transport Website -->
         <article class="glass-card project-card">
           <div class="project-img-wrapper">
-            <img src="img/bg02.jpg" alt="Transport Website" class="project-img">
+            <img src="img/parivahaan.jpg" alt="Transport Website" class="project-img">
             <div class="project-overlay">
               <span class="view-details">Logistics & Shipping</span>
             </div>
@@ -68,18 +68,18 @@
               <span class="tech-badge html"><i class="fa-brands fa-html5"></i> HTML5</span>
               <span class="tech-badge css"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
             </div>
-            <a href="https://github.com/Vishwaprasad7" target="_blank" class="project-link">
+            <a href="https://github.com/Vishwaprasad7/parivahan-system" target="_blank" class="project-link">
               View Source <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
 
         <!-- Project 3: Portfolio Website -->
-        <article class="glass-card project-card">
+        <article class="glass-card project-card clickable-card" onclick="window.open('https://vishwaprasadportfolio.netlify.app/', '_blank')">
           <div class="project-img-wrapper">
-            <img src="img/bg03.jpg" alt="Portfolio Website" class="project-img">
+            <img src="img/vishwa_protfolio.png" alt="Portfolio Website" class="project-img">
             <div class="project-overlay">
-              <span class="view-details">Personal Brand</span>
+              <span class="view-details">View Live Site <i class="fa-solid fa-up-right-from-square"></i></span>
             </div>
           </div>
           <div class="project-content">
@@ -92,18 +92,18 @@
               <span class="tech-badge html"><i class="fa-brands fa-html5"></i> HTML5</span>
               <span class="tech-badge css"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
             </div>
-            <a href="https://github.com/Vishwaprasad7" target="_blank" class="project-link">
+            <a href="https://github.com/Vishwaprasad7/vishwaprasadportfolio" target="_blank" class="project-link" onclick="event.stopPropagation();">
               View Source <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </article>
 
         <!-- Project 4: Meme Calculator -->
-        <article class="glass-card project-card">
+        <article class="glass-card project-card clickable-card" onclick="window.open('https://memecal.netlify.app/', '_blank')">
           <div class="project-img-wrapper">
-            <img src="img/bg04.jpg" alt="Meme calculator" class="project-img">
+            <img src="img/meme_calc.png" alt="Meme calculator" class="project-img">
             <div class="project-overlay">
-              <span class="view-details">Interactive & Fun</span>
+              <span class="view-details">View Live Site <i class="fa-solid fa-up-right-from-square"></i></span>
             </div>
           </div>
           <div class="project-content">
@@ -116,7 +116,7 @@
               <span class="tech-badge html"><i class="fa-brands fa-html5"></i> HTML5</span>
               <span class="tech-badge css"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
             </div>
-            <a href="https://github.com/Vishwaprasad7" target="_blank" class="project-link">
+            <a href="https://github.com/Vishwaprasad7/meme-calculator" target="_blank" class="project-link" onclick="event.stopPropagation();">
               View Source <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
@@ -176,6 +176,10 @@
       flex-direction: column;
       overflow: hidden;
       height: 100%;
+    }
+
+    .clickable-card {
+      cursor: pointer;
     }
 
     .project-img-wrapper {
